@@ -1,13 +1,15 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
-    (factory());
+    (global.GhostWorkerListing = factory());
 }(this, (function () { 'use strict';
 
-document.addEventListener("DOMContentLoaded", function (event) {
+/*
+document.addEventListener("DOMContentLoaded", function(event) {
 
-    listContent('#notes-list ul', 'ghostworker-content-v0.1');
+    listContent( '#notes-list ul', 'ghostworker-content-v0.1' )
 });
+*/
 
 function listContent(selector, cacheName) {
     var ul = document.querySelector(selector);
@@ -49,6 +51,8 @@ function listContent(selector, cacheName) {
         });
     });
 }
+
+return listContent;
 
 })));
 //# sourceMappingURL=ghostworker-listing.js.map

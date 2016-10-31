@@ -13,7 +13,7 @@ HTML needed for the javascript to work
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        listContent( '#notes-list ul', 'ghostworker-content-v0.1' )
+        GhostWorkerListing.listContent( '#notes-list ul', 'ghostworker-notes-v0.1' );
     });
 </script>
 ```
